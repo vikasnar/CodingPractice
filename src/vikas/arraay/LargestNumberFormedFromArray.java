@@ -29,11 +29,11 @@ public class LargestNumberFormedFromArray {
     find if XY is the larger or YX. Sort the list based on this order.
  */
 class lexSort implements Comparator<String> {
-    String X,Y;
-    String XY(){
+    private String X,Y;
+    private String XY(){
         return this.X+this.Y;
     }
-    String YX(){
+    private String YX(){
         return this.Y+this.X;
     }
     @Override
