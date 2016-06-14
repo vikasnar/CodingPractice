@@ -13,4 +13,10 @@ public class Utils {
         }
         System.out.println();
     }
+
+    public static boolean isEmpty(int[] arr) {
+        if(arr == null || arr.length == 0)
+            return true;
+        return false;
+    }
 }
