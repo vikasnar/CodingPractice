@@ -5,7 +5,7 @@ package vikas.arraay;
  */
 public class LargestSumContiguousSubArray {
     public static void main(String[] args){
-        int[] arr = new int[]{-2, -3, 4, -1, -2, 1, 5, -3};
+        int[] arr = new int[]{ 4, -1, -2, 1, 5, -3};
         printLargestSUmSubArray(arr);
     }
 
@@ -23,13 +23,9 @@ public class LargestSumContiguousSubArray {
             }
         }
         System.out.println("Max Sum = "+max);
-        for(int i = si ;i<arr.length;i++){
-            if(max>0){
-                System.out.print(arr[i]+" ");
-                max -= arr[i];
-            }
-            else
-                break;
+        for(int i = si ;i<arr.length && max > 0;i++){
+            System.out.print(arr[i]+" ");
+            max -= arr[i];
         }
     }
 }
