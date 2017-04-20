@@ -3,7 +3,7 @@ package geeksforgeeks.dataStructures.Trees;
 /**
  * Created by VikasN on 4/13/17.
  */
-public class Node<T> {
+public class Node<T extends Comparable<T>> {
     private T data;
     private Node<T> left;
     private Node<T> right;
@@ -36,16 +36,18 @@ public class Node<T> {
         return left;
     }
 
-    public void setLeft(Node<T> left) {
+    public Node<T> setLeft(Node<T> left) {
         this.left = left;
+        return this;
     }
 
     public Node<T> getRight() {
         return right;
     }
 
-    public void setRight(Node<T> right) {
+    public Node<T> setRight(Node<T> right) {
         this.right = right;
+        return this;
     }
 
     public T getData() {
